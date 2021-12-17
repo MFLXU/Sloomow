@@ -1,0 +1,192 @@
+* {
+  margin: 0%;
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+  color: #1e2022;
+}
+body {
+  background-color: #f0f5f9;
+}
+.navbar {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.logo {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.links2 {
+  display: none;
+}
+.navbar-items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem;
+}
+.navbar-link {
+  text-decoration: none;
+  font-weight: 400;
+  margin: 0rem 2rem;
+  color: #52616b;
+}
+.navbar-link:hover {
+  color: #1e2022;
+}
+
+main h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.Albums {
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-rows: 3;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.Albums .cover {
+  margin: 1rem auto;
+  width: 20rem;
+  background-color: #1e2022;
+  color: #f0f5f9;
+  height: 20rem;
+  filter: grayscale(80%);
+}
+.Albums .cover:hover {
+  filter: grayscale(0%);
+}
+
+img {
+  position: ;
+}
+.a {
+  background-image: url(images/retro.jpeg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.a {
+}
+.b {
+  background-image: url(images/purple.jpeg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.c {
+  background-image: url(images/sky.jpeg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.d {
+  background-image: url(images/wind.jpg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.e {
+  background-image: url(images/dust.jpeg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.f {
+  background-image: url(mages/hope.jpg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.g {
+  background-image: url(images/galaxy.jpeg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.h {
+  background-image: url(images/clouds.jpg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.i {
+  background-image: url(images/dear\ crush.jpg);
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.credits {
+  color: #52616b;
+  text-align: center;
+
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 1rem auto;
+}
+.credits a {
+  text-decoration: none;
+  color: #52616b;
+}
+.credits a:hover {
+  color: #1e2022;
+}
+@media (max-width: 1350px) {
+  .Albums {
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .Albums {
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-rows: 9;
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.logo{
+  align-self:center;
+}
+  .links {
+   padding: 1rem;
+
+  }
+
+  .navbar-items {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0rem;
+  }
+  .navbar-link {
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0rem 0.5rem;
+    color: #52616b;
+  }
+  .navbar-link:hover {
+    color: #1e2022;
+  }
+}
