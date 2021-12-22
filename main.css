@@ -10,7 +10,7 @@
   grid-template-columns: 350px;
   grid-template-rows: 350px;
   grid-row-gap: 1rem;
-  padding: 0rem;
+  padding: 0rem 1rem;
   margin: auto;
 }
 .cover {
