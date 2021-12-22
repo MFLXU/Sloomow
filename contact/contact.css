@@ -1,0 +1,38 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form__ {
+  display: grid;
+  grid-template-columns: 350px;
+  grid-template-rows: auto;
+  grid-row-gap: 0.5rem;
+}
+label {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e2022;
+  padding: 0rem;
+}
+input {
+  padding: 0.3rem 0.6rem;
+  border: 0.2rem solid #1e2022;
+  font-size: 1rem;
+}
+textarea {
+  padding: 0.3rem 0.6rem;
+  border: 0.2rem solid #1e2022;
+}
+.contact-form [type="submit"]{
+    background-color: #1e2022;
+    color: #f0f5f9;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    margin-top: 1rem;
+  cursor: pointer;
+}
