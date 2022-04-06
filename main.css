@@ -1,235 +1,238 @@
-.discography {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+  --color-light: #f3f3f3;
+  --color-dark: #1e2022;
+  --color-darker: #121212;
+  --transition: all 0.3s ease;
 }
-
-.albums {
-  display: grid;
-  grid-template-columns: 350px;
-  grid-template-rows: 350px;
-  grid-row-gap: 1rem;
-  padding: 0rem 1rem;
-  margin: auto;
-}
-.cover {
-  width: 100%;
-  height: 350px;
-  background-color: #c9d6df;
-  filter: grayscale(70%);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.cover:hover {
-  filter: grayscale(0%);
-  animation: zoom 0.1s forwards;
-}
-.a {
-  background-image: url(images/purple.jpeg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.b {
-  background-image: url(images/clouds.jpg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.c {
-  background-image: url(images/dust.jpeg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.d {
-  background-image: url(images/rain.jpg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.e {
-  background-image: url(images/dear\ crush.jpg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.f {
-  background-image: url(images/julius.jpg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.g {
-  background-image: url(images/waves.jpeg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.i {
-  background-image: url(images/retro.jpeg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.j {
-  background-image: url(images/hope.jpg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.k {
-  background-image: url(images/sky.jpeg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.l {
-  background-image: url(images/wind.jpg);
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#streaming {
-  margin-top: 4rem;
-  background-color: #1e2022;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-#streaming > h1 {
-  color: #f0f5f9;
-}
-.link-grid {
-  display: grid;
-  grid-template-columns: 18rem;
-  grid-template-rows: auto;
-  grid-row-gap: 2rem;
-  text-align: center;
-  margin: 2rem auto;
-}
-.link-grid a {
+/* ---------- Default Styling ---------- */
+* {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
-  color: #f0f5f9;
+  appearance: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Sora", sans-serif;
+  min-height: 100vh;
+  height: max-content;
+  width: 100vw;
+  font-weight: 400;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+svg {
+  width: 80%;
+  fill: var(--color-light);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.section__title {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+a {
+  color: inherit;
+}
+/* ---------- NavBar ---------- */
+nav {
+  padding: 1rem;
+  background-color: inherit;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  transition: var(--transition);
+}
+nav.on {
+  background-color: var(--color-darker);
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+nav .logo {
   font-size: 2rem;
   font-weight: bold;
-  padding: 1rem;
-  border: 0.2rem solid #f0f5f9;
-  border-radius: 1rem;
+}
+.nav__icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav i {
+  font-size: 2rem;
+}
+.nav__links {
+  background-color: var(--color-darker);
+  padding: 2rem 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 2rem;
+  transition: var(--transition);
+  animation: showNav 1s forwards;
+}
+.nav__links a {
+  width: 100%;
+  line-height: 2;
+  border-bottom: 4px solid var(--color-light);
+}
+.show-nav {
+  display: flex;
+  height: 92vh;
 }
 
-.credits {
-  padding: 1rem;
+/* ---------- DISCOGRAPHY ---------- */
+.discography {
   text-align: center;
+  margin-top: 6rem;
+  padding-bottom: 3rem;
+}
+/* ----- DISCOGRAPHY ----- */
+.discography__grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+}
+.album {
+  background-color: var(--color-darker);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+.album-cover {
+  width: 100%;
   background-color: #1e2022;
 }
-.credits a {
-  color: #f0f5f9;
-  text-decoration: none;
+.album-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.spotify:hover {
+.play-album {
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
   background-color: #1db954;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 1rem;
 }
-.apple:hover {
-  background-color: #fc3c44;
+.play-album:hover {
+  background-color: #178f41;
 }
-.deezer:hover {
-  background-color: #00c7f2;
+
+.nav__links-pc {
+  display: none;
 }
-.soundcloud:hover {
-  background-color: #ff8800;
+/* ---------- STREAMING SECTION ---------- */
+.streaming {
+  background-color: var(--color-darker);
+  padding: 3rem 0;
 }
-.napster:hover {
-  background-color: #fdb813;
+.streaming__services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
 }
-.youtube:hover {
-  background-color: red;
+.service {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.ig:hover {
-  background-color: #8a3ab9;
-}
-.tw:hover {
-  background-color: #1da1f2;
-}
-.rd:hover {
-  background-color: #ff4500;
-}
-.spotify:active {
-  background-color: #1db954;
-}
-.apple:active {
-  background-color: #fc3c44;
-}
-.deezer:active {
-  background-color: #00c7f2;
-}
-.soundcloud:active {
-  background-color: #ff8800;
-}
-.napster:active {
-  background-color: #fdb813;
-}
-.youtube:active {
-  background-color: red;
-}
-.ig:active {
-  background-color: #8a3ab9;
-}
-.tw:active {
-  background-color: #1da1f2;
-}
-.rd:active {
-  background-color: #ff4500;
-}
-@media (min-width: 800px) {
-  .albums {
-    display: grid;
-    grid-template-columns: 350px 350px;
-    grid-template-rows: 350px;
-    grid-row-gap: 2rem;
-    grid-column-gap: 2rem;
-    padding: 0rem;
-    margin: 2rem auto;
+ /* ---------- SOCIALS ---------- */
+ .socials{
+   width: max-content;
+   margin: 2rem auto;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   text-align: center;
+   column-gap: 1rem;
+ }
+ .socials i {
+   border-radius: 0.5rem;
+   padding: 1rem;
+   font-size: 3rem;
+ }
+/* ---------- RESPONSIVE DESIGN ---------- */
+/* ----- PC ----- */
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1300px;
   }
-  .link-grid {
-    grid-template-columns: 18rem 18rem;
-    grid-template-rows: auto;
-    grid-row-gap: 2rem;
-    grid-column-gap: 2rem;
+  nav {
+    border-bottom: 1px solid var(--color-darker);
   }
+  nav .logo {
+    font-size: 2rem;
+  }
+  .discography {
+    position: relative;
+    top: 2rem;
+  }
+  .discography__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .album:hover {
+    transition: var(--transition);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 1rem 0px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__links-pc {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  .nav__links-pc a:hover {
+    transform: scale(1.05);
+    transition: var(--transition);
+  }
+  /* ---------- STREAMING SECTION ---------- */
+  svg{
+    width: 30%;
+  }
+  .streaming__services{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .service svg{
+    fill: var(--color-dark);
+  }
+  .service svg:hover{
+    fill: var(--color-light);
+    transform: scale(1.05);
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  /* ---------- SOCIALS ---------- */
+.socials i:hover {
+  color: var(--color-darker);
+  background-color: var(--color-light);
+  transition: var(--transition);
 }
-@media (min-width: 1300px) {
-  .navbar-brand {
-    font-size: 3.5rem;
-  }
-  .link-grid {
-    grid-template-columns: 18rem 18rem 18rem;
-  }
-  .albums {
-    grid-template-columns: 350px 350px 350px;
-  }
-}
-@keyframes zoom {
-  0% {
-    background-size: 100%;
-  }
-  100% {
-    background-size: 104%;
-    background-position: center;
-  }
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
 }
